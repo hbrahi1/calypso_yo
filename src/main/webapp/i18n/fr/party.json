@@ -1,0 +1,25 @@
+{
+    "calypsoApp": {
+        "party" : {
+            "home": {
+                "title": "Parties",
+                "createLabel": "Créer un nouveau Party",
+                "createOrEditLabel": "Créer ou éditer un Party",
+                "search": "Recherche pour Party"
+            },
+            "created": "Un nouveau Party a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Party avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Party avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Party {{ id }} ?"
+            },
+            "detail": {
+                "title": "Party"
+            },
+            "partyId": "Party Id",
+            "partyName": "Party Name",
+            "partyStatus": "Party Status",
+            "member": "Member"
+        }
+    }
+}

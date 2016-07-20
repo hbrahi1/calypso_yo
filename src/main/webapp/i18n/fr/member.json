@@ -1,0 +1,31 @@
+{
+    "calypsoApp": {
+        "member" : {
+            "home": {
+                "title": "Members",
+                "createLabel": "Créer un nouveau Member",
+                "createOrEditLabel": "Créer ou éditer un Member",
+                "search": "Recherche pour Member"
+            },
+            "created": "Un nouveau Member a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Member avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Member avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Member {{ id }} ?"
+            },
+            "detail": {
+                "title": "Member"
+            },
+            "memberId": "Member Id",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "phoneNumber": "Phone Number",
+            "hireDate": "Hire Date",
+            "salary": "Salary",
+            "commissionPct": "Commission Pct",
+            "party": "Party",
+            "manager": "Manager"
+        }
+    }
+}

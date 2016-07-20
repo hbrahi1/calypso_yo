@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="calypsoApp.member.detail.title">Member</span> {{vm.member.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="calypsoApp.member.memberId">Member Id</span></dt>
+        <dd>
+            <span>{{vm.member.memberId}}</span>
+        </dd>
+        <dt><span translate="calypsoApp.member.firstName">First Name</span></dt>
+        <dd>
+            <span>{{vm.member.firstName}}</span>
+        </dd>
+        <dt><span translate="calypsoApp.member.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{vm.member.lastName}}</span>
+        </dd>
+        <dt><span translate="calypsoApp.member.email">Email</span></dt>
+        <dd>
+            <span>{{vm.member.email}}</span>
+        </dd>
+        <dt><span translate="calypsoApp.member.phoneNumber">Phone Number</span></dt>
+        <dd>
+            <span>{{vm.member.phoneNumber}}</span>
+        </dd>
+        <dt><span translate="calypsoApp.member.hireDate">Hire Date</span></dt>
+        <dd>
+            <span>{{vm.member.hireDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="calypsoApp.member.salary">Salary</span></dt>
+        <dd>
+            <span>{{vm.member.salary}}</span>
+        </dd>
+        <dt><span translate="calypsoApp.member.commissionPct">Commission Pct</span></dt>
+        <dd>
+            <span>{{vm.member.commissionPct}}</span>
+        </dd>
+        <dt><span translate="calypsoApp.member.party">Party</span></dt>
+        <dd>
+            <a ui-sref="party-detail({id:vm.member.partyId})">{{vm.member.partyId}}</a>
+        </dd>
+        <dt><span translate="calypsoApp.member.manager">Manager</span></dt>
+        <dd>
+            <a ui-sref="member-detail({id:vm.member.managerId})">{{vm.member.managerId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

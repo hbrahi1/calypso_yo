@@ -1,0 +1,66 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "party",
+      "otherEntityName": "party",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "many-to-one",
+      "relationshipName": "manager",
+      "otherEntityName": "member",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "memberId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "firstName",
+      "javadoc": "The firstname attribute.",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "hireDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "salary",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "commissionPct",
+      "fieldType": "Long"
+    }
+  ],
+  "changelogDate": "20160720175906",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceClass",
+  "entityTableName": "member"
+}

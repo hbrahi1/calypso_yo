@@ -1,0 +1,26 @@
+
+<div>
+    <h2><span translate="calypsoApp.party.detail.title">Party</span> {{vm.party.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="calypsoApp.party.partyId">Party Id</span></dt>
+        <dd>
+            <span>{{vm.party.partyId}}</span>
+        </dd>
+        <dt><span translate="calypsoApp.party.partyName">Party Name</span></dt>
+        <dd>
+            <span>{{vm.party.partyName}}</span>
+        </dd>
+        <dt><span translate="calypsoApp.party.partyStatus">Party Status</span></dt>
+        <dd>
+            <span translate="{{'calypsoApp.PartyStatus.' + vm.party.partyStatus}}">{{vm.party.partyStatus}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

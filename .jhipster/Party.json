@@ -1,0 +1,37 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-many",
+      "relationshipName": "member",
+      "otherEntityName": "member",
+      "otherEntityRelationshipName": "party"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "partyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "partyName",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "partyStatus",
+      "fieldType": "PartyStatus",
+      "fieldValues": "ACTIVE,INACTIVE"
+    }
+  ],
+  "changelogDate": "20160720175905",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "party"
+}

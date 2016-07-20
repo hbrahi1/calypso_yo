@@ -1,0 +1,44 @@
+
+entity Party {
+	partyId Long,
+	partyName String required
+	partyStatus PartyStatus
+}
+
+entity Member {
+	memberId Long,
+	/**
+	* The firstname attribute.
+	*/
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	hireDate ZonedDateTime,
+	salary Long,
+	commissionPct Long
+}
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+enum PartyStatus {
+	ACTIVE, INACTIVE
+}
+
+relationship OneToMany {
+	Party{member} to	Member
+}
+
+relationship ManyToOne {
+	Member{manager} to Member
+}
+
+paginate Member with infinite-scroll
+
+dto Member with mapstruct
+
+service Member with serviceClass
+
+	

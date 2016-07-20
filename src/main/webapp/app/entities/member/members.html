@@ -1,0 +1,78 @@
+<div>
+    <h2 translate="calypsoApp.member.home.title">Members</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="member.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="calypsoApp.member.home.createLabel">
+                        Create new Member
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="memberId"><span translate="calypsoApp.member.memberId">Member Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="firstName"><span translate="calypsoApp.member.firstName">First Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastName"><span translate="calypsoApp.member.lastName">Last Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email"><span translate="calypsoApp.member.email">Email</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phoneNumber"><span translate="calypsoApp.member.phoneNumber">Phone Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="hireDate"><span translate="calypsoApp.member.hireDate">Hire Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="salary"><span translate="calypsoApp.member.salary">Salary</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="commissionPct"><span translate="calypsoApp.member.commissionPct">Commission Pct</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="partyId"><span translate="calypsoApp.member.party">Party</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="managerId"><span translate="calypsoApp.member.manager">Manager</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+                <tr ng-repeat="member in vm.members track by member.id">
+                    <td><a ui-sref="member-detail({id:member.id})">{{member.id}}</a></td>
+                    <td>{{member.memberId}}</td>
+                    <td>{{member.firstName}}</td>
+                    <td>{{member.lastName}}</td>
+                    <td>{{member.email}}</td>
+                    <td>{{member.phoneNumber}}</td>
+                    <td>{{member.hireDate | date:'medium'}}</td>
+                    <td>{{member.salary}}</td>
+                    <td>{{member.commissionPct}}</td>
+                    <td>
+                        <a ui-sref="party-detail({id:member.partyId})">{{member.partyId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="member-detail({id:member.managerId})">{{member.managerId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="member-detail({id:member.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="member.edit({id:member.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="member.delete({id:member.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
