@@ -6,7 +6,7 @@
             "home": "Accueil",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
-                "main": "Entités",
+                "main": "CRM",
                 "party": "Party",
                 "member": "Member",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
@@ -121,5 +121,5 @@
         "emailexists": "E-mail is already in use!",
         "idexists": "A new {{entityName}} cannot already have an ID"
     },
-    "footer": "Ceci est votre pied de page"
+    "footer": "&copy;2016 Calypso Inc. Tous droits reservés."
 }
